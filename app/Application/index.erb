@@ -1,0 +1,19 @@
+<div class="container-fluid">
+
+  <%= render :partial => "/partials/page_head", :locals => {:back => "../", :title => "Application"} %>
+
+  <div class="row">
+    <div class="list-group">
+      <a href="<%= url_for :action => :app_properties %>" class="list-group-item">
+        <span class="glyphicon glyphicon-chevron-right pull-right" aria-hidden="true"></span>
+        Application properties </a>
+      <a href="<%= url_for :action => :app_databaseFilePath %>" class="list-group-item">
+        <span class="glyphicon glyphicon-chevron-right pull-right" aria-hidden="true"></span>
+        Application.databaseFilePath() </a>
+    </div>
+
+  </div>
+
+</div>
+
+

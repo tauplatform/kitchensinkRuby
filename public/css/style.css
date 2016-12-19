@@ -1,0 +1,28 @@
+.page-title {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.page-title .btn {
+    margin-top: 5px;
+}
+
+.item {
+    clear: both;
+}
+
+.item-name {
+
+}
+
+.item-value {
+    word-break: break-all;
+}
+
+.result-area {
+    margin-top: 1em;
+}
+
+#result {
+    word-break: break-all;
+}
