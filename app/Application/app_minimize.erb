@@ -1,0 +1,16 @@
+<div class="container-fluid">
+
+  <%= render :partial => "/partials/page_head", :locals => {:back => ".", :title => "Application.minimize"} %>
+
+  <div class="alert alert-info" role="alert">Press the button below and the application will be minimized
+    immediately
+  </div>
+
+  <form method="POST" action="<%= url_for :action => :minimize %>">
+
+    <button type="submit" class="btn btn-primary btn-block">Call method
+      minimize
+    </button>
+  </form>
+
+</div>
