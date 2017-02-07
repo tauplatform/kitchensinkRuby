@@ -1,4 +1,4 @@
-#sdk: "/Users/mva/.rvm/gems/ruby-1.9.3-p551/gems/rhodes-5.5.0.8"
+sdk: "/Users/mva/projects/rhomobile/rhodes"
 sdkversion: 5.5.0
 name: kitchensinkRuby
 version: 1.0
@@ -11,7 +11,7 @@ iphone:
   #provisionprofile:
   #codesignidentity:
   #entitlements:
-  BundleIdentifier: com.rhomobile.kitchensinkruby
+  BundleIdentifier: com.tau-technologies.kitchensinkruby
   BundleURLScheme: kitchensinkruby
   production:
     ipa_itunesartwork_image: "./production/iTunesArtwork.png"
@@ -33,7 +33,8 @@ win32:
   deployqt: 1
   deploymsvc: 1
 
-extensions: []
+extensions:
+  - mediacapture
 
 rhobundle:
   exclude_items:

@@ -1,0 +1,18 @@
+<div class="container-fluid">
+
+  <%= render :partial => "/partials/page_head", :locals => {:back => ".", :title => "Camera.showPreview/hidePreview"} %>
+
+  <h1>Not implemented yet</h1>
+
+  <button class="btn btn-primary btn-block">Call method showPreview</button>
+  <button class="btn btn-primary btn-block">Call method hidePreview</button>
+
+  <div class="result-area">
+    <div class="alert <%= result_css_class %>" role="alert"><%= @result %></div>
+  </div>
+</div>
+
+<img id="image" src="<%= image_uri %>" class="img-responsive">
+
+
+</div>

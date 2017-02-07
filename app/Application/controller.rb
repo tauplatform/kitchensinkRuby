@@ -68,7 +68,7 @@ class ApplicationController < Rho::RhoController
       Rho::Application.minimize()
       be_success
     rescue Exception => e
-      puts '======================= exception hadler ======================='
+      puts '======================= exception handler ======================='
       puts e.message
       be_error
     end
@@ -92,7 +92,7 @@ class ApplicationController < Rho::RhoController
       Rho::Application.quit()
       be_success
     rescue Exception => e
-      puts '======================= exception hadler ======================='
+      puts '======================= exception handler ======================='
       puts e.message
       be_error
     end
