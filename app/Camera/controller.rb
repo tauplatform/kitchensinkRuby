@@ -78,6 +78,10 @@ class CameraController < Rho::RhoController
   end
 
   def get_all_properties
+    render :action => :camera_get_all_properties
+  end
+
+  def do_get_all_properties
     begin
       @result = Rho::Camera.getAllProperties
       be_success
