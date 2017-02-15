@@ -67,7 +67,7 @@ class CameraController < Rho::RhoController
 
   def enumerate
     begin
-      @result = Rho::Camera.enumerate
+      @result = Rho::Camera.enumerate.collect { |each| each.cameraType }
       @result = 'Cameras have been not found' if @result.empty?
       be_success
     rescue Exception => e
