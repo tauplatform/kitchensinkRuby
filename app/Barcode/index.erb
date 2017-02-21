@@ -1,0 +1,19 @@
+<div class="container-fluid">
+
+  <%= render :partial => "/partials/page_head", :locals => {:back => "../", :title => "Barcode"} %>
+
+  <div class="row">
+    <div class="list-group">
+      <a href="<%= url_for :action => :enumerate %>" class="list-group-item">
+        <span class="glyphicon glyphicon-chevron-right pull-right" aria-hidden="true"></span>
+        Barcode.enumerate</a>
+      <a href="<%= url_for :action => :get_all_properties %>" class="list-group-item">
+        <span class="glyphicon glyphicon-chevron-right pull-right" aria-hidden="true"></span>
+        Barcode.getAllProperties</a>
+      <a href="<%= url_for :action => :take_picture %>" class="list-group-item">
+        <span class="glyphicon glyphicon-chevron-right pull-right" aria-hidden="true"></span>
+        Barcode.take</a>
+    </div>
+  </div>
+
+</div>
