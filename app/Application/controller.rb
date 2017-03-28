@@ -18,125 +18,129 @@ class ApplicationController < Rho::RhoController
     return @resultStatus == 'error'
   end
 
-  def be_success
-    @resultStatus = 'success';
+  def be_success(aString)
+    @result = aString
+    @resultStatus = 'success'
   end
 
-  def be_error
-    @resultStatus = 'error';
+  def be_error(aString)
+    @result = aString
+    @resultStatus = 'error'
   end
 
-  def resultCssClass
-    temp = @result.nil? ? 'hidden' : ''
-    return temp if @result.nil?
+  def result_css_class
+    if @result.nil?
+      return 'hidden'
+    end
     if success?
-      temp = temp + ' alert-success'
+      return 'alert-success'
     end
-
     if error?
-      temp = temp + ' alert-danger'
+      return 'alert-danger'
     end
-    return temp
   end
 
   def databaseFilePath
+    render :action => :app_databaseFilePath
+  end
+
+  def do_databaseFilePath
     begin
       value = @params['value']
-      @result = Rho::Application.databaseFilePath(value)
-      be_success
+      be_success(Rho::Application.databaseFilePath(value))
     rescue Exception => e
-      @result = e.message
-      be_error
+      be_error(e.message)
     end
     render :action => :app_databaseFilePath
   end
 
   def expandDatabaseBlobFilePath
+    render :action => :app_expandDatabaseBlobFilePath
+  end
+
+  def do_expandDatabaseBlobFilePath
     begin
       value = @params['value']
-      @result = Rho::Application.expandDatabaseBlobFilePath(value)
-      be_success
+      be_success(Rho::Application.expandDatabaseBlobFilePath(value))
     rescue Exception => e
-      @result = e.message
-      be_error
+      be_error(e.message)
     end
     render :action => :app_expandDatabaseBlobFilePath
   end
 
-  def minimize()
+  def minimize_and_restore()
+    render :action => :app_minimize_and_restore
+  end
+
+  def do_minimize()
     begin
-      Rho::Application.minimize()
-      be_success
+      Rho::Application.minimize
+      sleep(2)
+      Rho::Application.restore
+      be_success('The application was minimized and restored')
     rescue Exception => e
-      puts '======================= exception handler ======================='
-      puts e.message
-      be_error
+      be_error(e.message)
     end
-    render :action => :app_expandDatabaseBlobFilePath
+    render :action => :app_minimize_and_restore
   end
 
   def modelFolderPath
+    render :action => :app_modelFolderPath
+  end
+
+  def do_modelFolderPath
     begin
       value = @params['value']
-      @result = Rho::Application.modelFolderPath(value)
-      be_success
+      be_success(Rho::Application.modelFolderPath(value))
     rescue Exception => e
-      @result = e.message
-      be_error
+      be_error(e.message)
     end
     render :action => :app_modelFolderPath
   end
 
   def quit
+    render :action => :app_quit
+  end
+
+  def do_quit
     begin
       Rho::Application.quit()
-      be_success
     rescue Exception => e
-      puts '======================= exception handler ======================='
-      puts e.message
-      be_error
+      be_error(e.message)
     end
-    render :action => :app_app_quit
+    render :action => :app_quit
   end
 
   def relativeDatabaseBlobFilePath
+    render :action => :app_relativeDatabaseBlobFilePath
+  end
+
+  def do_relativeDatabaseBlobFilePath
     begin
       value = @params['value']
-      @result = Rho::Application.relativeDatabaseBlobFilePath(Rho::Application.databaseBlobFolder + '/' + value)
-      be_success
+      be_success (Rho::Application.relativeDatabaseBlobFilePath(Rho::Application.databaseBlobFolder + '/' + value))
     rescue Exception => e
-      @result = e.message
-      be_error
+      be_error(e.message)
     end
     render :action => :app_relativeDatabaseBlobFilePath
   end
 
-  def restore
-    begin
-      Rho::Application.minimize
-      sleep(2)
-      Rho::Application.restore
-      @result = 'The application has been restored successfully'
-      be_success
-    rescue Exception => e
-      puts e.message
-      be_error
-    end
-    render :action => :app_restore
-  end
-
   def applicationNotifyCallback
     value = @params['applicationEvent']
-    @result = value.to_s
+    Rho::WebView.executeJavascript("$('.result-area div').append('<div>#{ Time.now.strftime('%k:%m:%S')} - #{value}</div>')")
+
   end
 
   def setApplicationNotify
+    render :action => :app_setApplicationNotify
+  end
+
+  def do_setApplicationNotify
     begin
       Rho::Application.setApplicationNotify(url_for(:action => :applicationNotifyCallback))
-      be_success
+      be_success('')
     rescue Exception => e
-      puts e.message
-      be_error
+      be_error(e.message)
     end
     render :action => :app_setApplicationNotify
   end

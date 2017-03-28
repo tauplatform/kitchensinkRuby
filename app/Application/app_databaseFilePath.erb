@@ -2,7 +2,7 @@
 
   <%= render :partial => "/partials/page_head", :locals => {:back => ".", :title => "Application.databaseFilePath"} %>
 
-  <form method="POST" action="<%= url_for :action => :databaseFilePath %>">
+  <form method="POST" action="<%= url_for :action => :do_databaseFilePath %>">
 
     <div class="form-group">
       <input type="text" id="databaseFilePath" name="value" class="form-control"/>

@@ -2,7 +2,7 @@
 
   <%= render :partial => "/partials/page_head", :locals => {:back => ".", :title => "Application.expandDatabaseBlobFilePath"} %>
 
-  <form method="POST" action="<%= url_for :action => :expandDatabaseBlobFilePath  %>">
+  <form method="POST" action="<%= url_for :action => :do_expandDatabaseBlobFilePath  %>">
 
     <div class="form-group">
         <input type="text" id="expandDatabaseBlobFilePath" name="value" class="form-control" />

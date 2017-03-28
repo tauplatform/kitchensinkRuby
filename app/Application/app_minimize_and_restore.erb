@@ -3,14 +3,18 @@
   <%= render :partial => "/partials/page_head", :locals => {:back => ".", :title => "Application.minimize"} %>
 
   <div class="alert alert-info" role="alert">Press the button below and the application will be minimized
-    immediately
+    immediately and will be restored in a couple of seconds
   </div>
 
-  <form method="POST" action="<%= url_for :action => :minimize %>">
+  <form method="POST" action="<%= url_for :action => :do_minimize %>">
 
     <button type="submit" class="btn btn-primary btn-block">Call method
-      minimize
+      minimize() and restore()
     </button>
   </form>
+
+  <div class="result-area">
+    <div class="alert <%= result_css_class %>" role="alert"><%= @result %></div>
+  </div>
 
 </div>

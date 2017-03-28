@@ -1,10 +1,20 @@
-.page-title {
-    margin-top: 1em;
-    margin-bottom: 1em;
+#header {
+    height: 50px;
+    margin-top: 10px;
 }
 
-.page-title .btn {
-    margin-top: 5px;
+#header img {
+    width: 32px;
+    height: 32px;
+    margin-right: 1em;
+}
+
+#header .title {
+    font-size: 1.4em;
+}
+
+#header .btn {
+    width: 60px;
 }
 
 .item {
@@ -21,6 +31,7 @@
 
 .result-area {
     margin-top: 1em;
+    word-wrap: break-word;
 }
 
 #result {

@@ -2,7 +2,7 @@
 
   <%= render :partial => "/partials/page_head", :locals => {:back => ".", :title => "Application.modelFolderPath"} %>
 
-  <form method="POST" action="<%= url_for :action => :modelFolderPath  %>">
+  <form method="POST" action="<%= url_for :action => :do_modelFolderPath  %>">
 
     <div class="form-group">
         <input type="text" id="modelFolderPath" name="value" class="form-control" />

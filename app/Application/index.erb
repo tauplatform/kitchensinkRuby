@@ -1,6 +1,6 @@
 <div class="container-fluid">
 
-  <%= render :partial => "/partials/page_head", :locals => {:back => "../", :title => "Application"} %>
+  <%= render :partial => "/partials/page_head", :locals => {:back => "/app/", :title => "Application"} %>
 
   <div class="row">
     <div class="list-group">
@@ -13,9 +13,9 @@
       <a href="<%= url_for :action => :app_expandDatabaseBlobFilePath %>" class="list-group-item">
         <span class="glyphicon glyphicon-chevron-right pull-right" aria-hidden="true"></span>
         Application.expandDatabaseBlobFilePath() </a>
-      <a href="<%= url_for :action => :app_minimize %>" class="list-group-item">
+      <a href="<%= url_for :action => :app_minimize_and_restore %>" class="list-group-item">
         <span class="glyphicon glyphicon-chevron-right pull-right" aria-hidden="true"></span>
-        Application.minimize() </a>
+        Application minimize and restore </a>
       <a href="<%= url_for :action => :app_modelFolderPath %>" class="list-group-item">
         <span class="glyphicon glyphicon-chevron-right pull-right" aria-hidden="true"></span>
         Application.modelFolderPath() </a>
@@ -25,9 +25,6 @@
       <a href="<%= url_for :action => :app_relativeDatabaseBlobFilePath %>" class="list-group-item">
         <span class="glyphicon glyphicon-chevron-right pull-right" aria-hidden="true"></span>
         Application.relativeDatabaseBlobFilePath() </a>
-      <a href="<%= url_for :action => :app_restore %>" class="list-group-item">
-        <span class="glyphicon glyphicon-chevron-right pull-right" aria-hidden="true"></span>
-        Application.restore() </a>
       <a href="<%= url_for :action => :app_setApplicationNotify %>" class="list-group-item">
         <span class="glyphicon glyphicon-chevron-right pull-right" aria-hidden="true"></span>
         Application.setApplicationNotify() </a>
