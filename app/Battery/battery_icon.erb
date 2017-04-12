@@ -1,0 +1,21 @@
+<div class="container-fluid">
+
+  <%= render :partial => "/partials/page_head", :locals => {:back => ".", :title => "Battery.show/hide_icon"} %>
+
+  <div class="alert alert-info" role="alert">The battery icon will be shown at the left-top corner of the screen
+  </div>
+
+  <button id="showIcon" class="btn btn-primary btn-block">Show icon</button>
+  <button id="hideIcon" class="btn btn-primary btn-block">Hide icon</button>
+
+</div>
+
+<script>
+    $("#showIcon").on("click", function () {
+        $.get("<%= url_for :action => :do_show_icon %>")
+    })
+
+    $("#hideIcon").on("click", function () {
+        $.get("<%= url_for :action => :do_hide_icon %>")
+    })
+</script>

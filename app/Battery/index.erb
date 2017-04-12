@@ -1,0 +1,19 @@
+<div class="container-fluid">
+
+  <%= render :partial => "/partials/page_head", :locals => {:back => "../", :title => "Battery"} %>
+
+  <div class="row">
+    <div class="list-group">
+      <a href="<%= url_for :action => :properties %>" class="list-group-item">
+        <span class="glyphicon glyphicon-chevron-right pull-right" aria-hidden="true"></span>
+        Battery properties</a>
+      <a href="<%= url_for :action => :battery_status %>" class="list-group-item">
+        <span class="glyphicon glyphicon-chevron-right pull-right" aria-hidden="true"></span>
+        Battery.batteryStatus</a>
+      <a href="<%= url_for :action => :show_hide_icon %>" class="list-group-item">
+        <span class="glyphicon glyphicon-chevron-right pull-right" aria-hidden="true"></span>
+        Battery.showIcon/hideIcon</a>
+    </div>
+  </div>
+
+</div>

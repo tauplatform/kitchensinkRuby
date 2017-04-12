@@ -38,6 +38,7 @@ win32:
 extensions:
   - mediacapture
   - barcode
+  - indicators
 
 rhobundle:
   exclude_items:
