@@ -1,0 +1,16 @@
+<div class="container-fluid">
+
+  <%= render :partial => "/partials/page_head", :locals => {:back => "../", :title => @title} %>
+
+  <div class="row">
+    <div class="list-group">
+      <a href="<%= url_for :action => :config_path %>" class="list-group-item">
+        <span class="glyphicon glyphicon-chevron-right pull-right" aria-hidden="true"></span>
+        Config.config_path</a>
+      <a href="<%= url_for :action => :get_set_property %>" class="list-group-item">
+        <span class="glyphicon glyphicon-chevron-right pull-right" aria-hidden="true"></span>
+        Config.setProperty/getProperty</a>
+    </div>
+  </div>
+
+</div>
