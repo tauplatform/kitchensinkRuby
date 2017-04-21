@@ -1,0 +1,22 @@
+<div class="container-fluid">
+
+  <%= render partial: '/partials/page_head', locals: {back: '.', title: 'Database common example'} %>
+
+
+  <form method="POST" action="<%= url_for :action => :do_action %>">
+
+      <div class="form-group">
+        <input type="text" name="tableName" class="form-control" placeholder="input table name">
+      </div>
+      <button type="submit" name="createTable" class="btn btn-primary btn-block">Create table</button>
+      <button type="submit" name="showTables" class="btn btn-primary btn-block">Show tables in database</button>
+      <button type="submit" name="destroyTable" class="btn btn-primary btn-block">Destroy table</button>
+
+  </form>
+
+  <div class="result-area">
+    <div class="alert <%= result_css_class %>" role="alert"><%= @result %></div>
+  </div>
+</div>
+
+</div>
