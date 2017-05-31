@@ -21,6 +21,7 @@ wp8:
   productid: '1ef3a390-a41a-0134-eff9-60f81db5e3c0'
 uwp:
   productid: 'caa0300f-1021-40aa-bb98-27c5547616fa'
+  target: 'ARM'
 android:
   #manifest_template: 'AndroidManifest.erb'
   version: 4.1.0
@@ -39,9 +40,9 @@ win32:
   deploymsvc: 1
 
 extensions:
-  - mediacapture
-  - barcode
-  - indicators
+ # - mediacapture
+ # - barcode
+ # - indicators
 
 rhobundle:
   exclude_items:
