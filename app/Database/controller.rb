@@ -50,7 +50,7 @@ class DatabaseController < Rho::RhoController
         do_create_table(@params['tableName'])
       end
       if @params['showTables']
-        @result = do_show_tables
+        do_show_tables
       end
       if @params['destroyTable']
         do_destroy_table(@params['tableName'])
@@ -75,7 +75,7 @@ class DatabaseController < Rho::RhoController
     db = Rho::Database.new(Rho::Application.databaseFilePath('test'), 'test')
     value = db.executeSql("SELECT name FROM sqlite_master WHERE type='table'")
     db.close
-    return value
+    @result = value
   end
 
   def do_destroy_table(tableName)
