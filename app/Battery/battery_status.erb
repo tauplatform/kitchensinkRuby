@@ -15,27 +15,15 @@
 </div>
 
 <script>
-
     $("#update_periodically").on("click", function () {
         $.get("<%= url_for :action => :do_update_periodically %>")
-    })
+    });
 
     $("#on_status_changed").on("click", function () {
         $.get("<%= url_for :action => :do_on_status_changed %>")
-    })
+    });
 
     $("#stop_battery_status").on("click", function () {
         $.get("<%= url_for :action => :do_stop_battery_status %>")
-    })
-
-    var showResult = function (value) {
-        $("#result").text(value);
-    };
-    var showError = function (value) {
-        $("#error").text(value);
-    }
+    });
 </script>
-
-</body>
-
-</html>
