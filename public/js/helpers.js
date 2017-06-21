@@ -3,10 +3,10 @@
  */
 
 function showResult  (value) {
-    $(".result .success").removeClass("hidden");
-    $(".result success").text(value);
+    $(".result .alert-success").removeClass("hidden");
+    $(".result .alert-success").text(value);
 };
 var showError = function (value) {
-    $(".result .success").removeClass("hidden");
-    $(".result .error").text(value);
+    $(".result .alert-danger").removeClass("hidden");
+    $(".result .alert-danger").text(value);
 }

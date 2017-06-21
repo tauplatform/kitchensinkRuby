@@ -7,7 +7,6 @@ class SignatureController < Rho::RhoController
   include BrowserHelper
 
   def index
-    @title = 'Config'
     render
   end
 

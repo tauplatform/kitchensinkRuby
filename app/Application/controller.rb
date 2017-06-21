@@ -127,7 +127,7 @@ class ApplicationController < Rho::RhoController
 
   def applicationNotifyCallback
     value = @params['applicationEvent']
-    Rho::WebView.executeJavascript("$('.result-area div').append('<div>#{ Time.now.strftime('%k:%m:%S')} - #{value}</div>')")
+    Rho::WebView.executeJavascript("$('.result div').append('<div>#{ Time.now.strftime('%k:%m:%S')} - #{value}</div>')")
 
   end
 
