@@ -1,10 +1,11 @@
-sdk: "../rhodes"
+sdk: "/Users/mva/projects/rhomobile/rhodes"
 sdkversion: 5.8.0
 name: kitchensinkRuby
 version: 1.0
 vendor: rhomobile
 build: debug
 applog: rholog.txt
+app_type: "rhoelements"
 iphone:
   configuration: Release
   sdk: iphonesimulator10.2
@@ -40,9 +41,11 @@ win32:
   deploymsvc: 1
 
 extensions:
- # - mediacapture
- # - barcode
- # - indicators
+ - mediacapture
+ - barcode
+ - indicators
+ - hardwarekeys
+# - signature
 
 rhobundle:
   exclude_items:
