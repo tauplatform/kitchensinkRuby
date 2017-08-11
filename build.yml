@@ -8,7 +8,7 @@ applog: rholog.txt
 app_type: "rhoelements"
 iphone:
   configuration: Release
-  sdk: iphonesimulator10.2
+  sdk: iphonesimulator10.3
   #provisionprofile:
   #codesignidentity:
   #entitlements:
@@ -18,7 +18,7 @@ iphone:
     ipa_itunesartwork_image: "./production/iTunesArtwork.png"
   # Note: Specifies the URL schemes the app is able to call using Rho.System.runApplication
   #ApplicationQueriesSchemes: ["scheme1", "scheme2"]
-  extensions: ["hardwarekeys", "barcode", "screenorientation", "indicators", "sensor", "websocket", "signature", "audiocapture", "mediacapture","printing", "mediaplayer", "printing_zebra"]
+  extensions: ["hardwarekeys", "barcode", "screenorientation", "indicators", "sensor", "signature", "audiocapture", "mediacapture","printing", "mediaplayer", "printing_zebra"]
 wp8:
   productid: '98cef7b0-88bb-0134-7b78-60f81db5e3c0'
 uwp:
