@@ -1,0 +1,16 @@
+<div class="container-fluid">
+
+  <%= render :partial => "/partials/page_head", :locals => {:back => "/app/", :title => "Intent"} %>
+
+  <div class="row">
+    <div class="list-group">
+      <a href="<%= url_for :action => :intent_send %>" class="list-group-item">
+        <span class="glyphicon glyphicon-chevron-right pull-right" aria-hidden="true"></span>
+        Intent.send </a>
+    </div>
+
+  </div>
+
+</div>
+
+

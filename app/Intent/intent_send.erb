@@ -1,0 +1,50 @@
+<div class="container-fluid">
+
+  <%= render :partial => "/partials/page_head", :locals => {:back => '.', :title => 'Intent.send'} %>
+
+
+
+  <div class="container">
+    <button type="button" id="google-store" class="btn btn-primary btn-block">Open Google Store</button>
+    <button type="button" id="apple-store" class="btn btn-primary btn-block">Open App Store</button>
+    <button type="button" id="google-maps" class="btn btn-primary btn-block">Open Google Maps</button>
+    <button type="button" id="apple-maps" class="btn btn-primary btn-block">Open Apple Maps</button>
+
+  </div>
+
+  <div class="result">
+    <div class="alert <%= result_css_class %>" role="alert"><%= @result %></div>
+  </div>
+</div>
+
+<script>
+  $("body").on("onExecutionFailed", function(event, data){
+      console.log("onExecutionFailed", event);
+      console.log("onExecutionFailed", data);
+      alert("failed")
+  })
+</script>
+
+<script>
+    $("#google-store").on("click", function (event) {
+        $.post("<%= url_for(:action => :do_open_google_store) %>", function (data) {
+        }, "json");
+    })
+
+    $("#apple-store").on("click", function (event) {
+        $.post("<%= url_for(:action => :do_open_apple_store) %>", function (data) {
+        }, "json");
+    })
+
+    $("#google-maps").on("click", function (event) {
+        $.post("<%= url_for(:action => :do_open_google_maps) %>", function (data) {
+        }, "json");
+    })
+
+    $("#apple-maps").on("click", function (event) {
+        $.post("<%= url_for(:action => :do_open_apple_maps) %>", function (data) {
+        }, "json");
+    })
+</script>
+
+
