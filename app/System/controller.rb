@@ -44,16 +44,60 @@ class SystemController < Rho::RhoController
     render :action => :system_open_url
   end
 
-  def do_open_url
-    begin
-      value = @params['value']
-      be_success(Rho::System.openUrl(value))
-    rescue Exception => e
-      be_error(e.message)
-    end
-    render :action => :system_open_url
+  def run_application
+    render :action => :system_run_application
   end
 
+  def do_run_application_google_store
+    app_name = 'market://details?id=com.facebook.katana'
+    Rho::System.runApplication(app_name)
+  end
+
+  def do_run_application_apple_store
+    app_name = 'itms://itunes.apple.com/us/album/bach-brandenburg-concertos-orchestral-suites-violin/id73409969'
+    Rho::System.runApplication(app_name)
+  end
+
+
+  def do_run_application_google_maps
+    app_name = 'geo:37.422, -122.084'
+    Rho::System.runApplication(app_name)
+  end
+
+  def do_run_application_apple_maps
+    app_name = 'maps://maps.apple.com/?address=1,Infinite+Loop,Cupertino,California'
+    Rho::System.runApplication(app_name)
+  end
+
+  def do_open_url_tel
+    url = 'tel:555-555'
+    Rho::System.openUrl(url)
+  end
+
+  def do_open_url_sms
+    url = 'sms:555-555'
+    Rho::System.openUrl(url)
+  end
+
+  def do_open_url_google_store
+    url = 'market://details?id=com.facebook.katana'
+    Rho::System.openUrl(url)
+  end
+
+  def do_open_url_apple_store
+    url = 'itms://itunes.apple.com/us/album/bach-brandenburg-concertos-orchestral-suites-violin/id73409969'
+    Rho::System.openUrl(url)
+  end
+
+  def do_open_url_google_maps
+    url = 'geo:37.422, -122.084'
+    Rho::System.openUrl(url)
+  end
+
+  def do_open_url_apple_maps
+    app_name = 'maps://maps.apple.com/?address=1,Infinite+Loop,Cupertino,California'
+    Rho::System.runApplication(app_name)
+  end
 end
 
 
