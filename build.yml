@@ -41,7 +41,7 @@ win32:
   msvc: 2015
   deployqt: 1
   deploymsvc: 1
-  extensions: ["barcode", "mediacapture"]
+  #extensions: ["barcode", "mediacapture"]
 
 extensions:
 # - mediacapture
