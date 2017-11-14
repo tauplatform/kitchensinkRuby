@@ -5,7 +5,7 @@ version: 1.0
 vendor: rhomobile
 build: debug
 applog: rholog.txt
-app_type: "rhoelements"
+#app_type: "rhoelements"
 iphone:
   configuration: Release
   sdk: iphonesimulator10.3
