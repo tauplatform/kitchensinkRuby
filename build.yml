@@ -35,7 +35,7 @@ android:
 wm:
   #sdk: "MC3000c50b (ARMV4I)"
   #sdk: "Windows Mobile 6.5.3 Professional DTK (ARMV4I)"
-  extensions: ["barcode", "screenorientation", "cardreader", "indicators", "sensor", "audiocapture", "mediacapture"]
+  extensions: ["webkit", "barcode", "screenorientation", "cardreader", "indicators", "sensor", "audiocapture", "mediacapture"]
 
 win32:
   msvc: 2015
