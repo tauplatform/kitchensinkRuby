@@ -1,0 +1,18 @@
+<div class="container-fluid">
+
+  <%= render :partial => "/partials/page_head", :locals => {:back => "/app/", :title => 'OpenSSL'} %>
+
+  <%
+    require 'openssl/digest'
+    teststring = 'Test String' 
+  %>
+
+  <div class="row">
+    <div class="list-group">
+      <li class="list-group-item">SHA512: <%= OpenSSL::Digest::SHA512.new %></li>
+      <li class="list-group-item">SHA256: <%= OpenSSL::Digest::SHA256.new %></li>
+      <li class="list-group-item">MD5: <%= OpenSSL::Digest::MD5.new %></li>        
+    </div>
+  </div>
+
+</div>
