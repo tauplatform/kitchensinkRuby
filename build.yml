@@ -1,7 +1,8 @@
 #sdk: "/Users/mva/projects/rhomobile/rhodes"
+sdk: d:/work/tau/repos/rhodes
 sdkversion: 6.0.0
 name: kitchensinkRuby
-version: 1.0
+version: 1.0.3
 vendor: rhomobile
 build: debug
 applog: rholog.txt
@@ -27,7 +28,7 @@ uwp:
   extensions: ["sensor", "mediacapture"]
 android:
   #manifest_template: 'AndroidManifest.erb'
-  version: 4.4.2
+  version: 26
   # Note: in order to simplify debugging only app messages and system channels with priority informative and higher, and any errors are enabled by default
   logcatFilter: APP:I StrictMode:I DEBUG:I *:E
   extensions:
@@ -50,6 +51,11 @@ android:
   - digest-sha2
   - digest-md5
   - ezcrypto
+
+  abis:
+  - arm
+  - x86
+  - aarch64
 
 wm:
   #sdk: "MC3000c50b (ARMV4I)"
