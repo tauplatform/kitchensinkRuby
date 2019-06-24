@@ -1,5 +1,4 @@
-#sdk: "/Users/mva/projects/rhomobile/rhodes"
-sdk: d:/work/tau/repos/rhodes
+#../rhodes
 sdkversion: 6.0.0
 name: kitchensinkRuby
 version: 1.0.3
