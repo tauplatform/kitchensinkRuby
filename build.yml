@@ -1,9 +1,9 @@
 #../rhodes
-sdkversion: 6.0.0
+sdkversion: 7.1.0
 name: kitchensinkRuby
-version: 1.0.3
+version: 1.0.5
 vendor: rhomobile
-build: debug
+build: release #debug
 applog: rholog.txt
 #app_type: "rhoelements"
 iphone:
@@ -27,7 +27,9 @@ uwp:
   extensions: ["sensor", "mediacapture"]
 android:
   #manifest_template: 'AndroidManifest.erb'
-  version: 26
+  version: 9
+  minSDK: 19
+  targetSDK: 28
   # Note: in order to simplify debugging only app messages and system channels with priority informative and higher, and any errors are enabled by default
   logcatFilter: APP:I StrictMode:I DEBUG:I *:E
   extensions:
