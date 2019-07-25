@@ -1,11 +1,10 @@
 #../rhodes
 sdkversion: 7.1.0
-name: kitchensinkRuby
-version: 1.0.5
+name: KitchensinkRuby
+version: 1.0.7
 vendor: rhomobile
 build: release #debug
 applog: rholog.txt
-#app_type: "rhoelements"
 iphone:
   configuration: Release
   sdk: iphonesimulator10.3
