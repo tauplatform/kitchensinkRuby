@@ -26,9 +26,9 @@ uwp:
   extensions: ["sensor", "mediacapture"]
 android:
   #manifest_template: 'AndroidManifest.erb'
-  version: 9
-  minSDK: 19
-  targetSDK: 28
+  #version: 9
+  minSDK: 23
+  targetSDK: 29
   # Note: in order to simplify debugging only app messages and system channels with priority informative and higher, and any errors are enabled by default
   logcatFilter: APP:I StrictMode:I DEBUG:I *:E
   extensions:
