@@ -5,6 +5,7 @@ version: 1.0.7
 vendor: rhomobile
 build: release #debug
 applog: rholog.txt
+#app_type: "rhoelements"
 iphone:
   configuration: Release
   sdk: iphonesimulator10.3
@@ -61,7 +62,8 @@ linux:
 wm:
   #sdk: "MC3000c50b (ARMV4I)"
   #sdk: "Windows Mobile 6.5.3 Professional DTK (ARMV4I)"
-  extensions: ["webkit", "barcode", "screenorientation", "cardreader", "indicators", "sensor", "audiocapture", "mediacapture"]
+  sdk: "Windows Mobile 6.5 Professional SDK (ARMV4I)"
+  #extensions: ["webkit", "barcode", "screenorientation", "cardreader", "indicators", "sensor", "audiocapture", "mediacapture"]
 
 win32:
   msvc: 2017
