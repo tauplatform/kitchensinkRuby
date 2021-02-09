@@ -66,7 +66,7 @@ wm:
   #extensions: ["webkit", "barcode", "screenorientation", "cardreader", "indicators", "sensor", "audiocapture", "mediacapture"]
 
 win32:
-  msvc: 2017
+  #msvc: 2017
   deployqt: 1
   deploymsvc: 1
   #extensions: ["barcode", "mediacapture"]
